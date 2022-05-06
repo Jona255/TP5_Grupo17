@@ -1,0 +1,43 @@
+@charset "ISO-8859-1";
+
+P {color:black; 
+	font-size:15px;
+   font-family:Courier;
+   font-weight:bold;
+   font-style:italic;
+   line-height:30px;
+   
+   
+   text-transform:capitalize;
+   text-align:left;
+   text-indent:30px;
+  }
+h1 {
+	color: orange;
+	font-size: 36px;
+	text-align: center;
+	font-family:Verdana;
+	font-style:italic;
+	font-size:35px;
+}
+
+h2 {
+	color: #ff00ff;
+	font-size: 36px;
+	text-align: center;
+	font-family:Arial;
+	font-style:italic;
+	font-size:25px;
+	
+}
+
+a {
+	text-decoration: underline;
+	 font-family:verdana;
+	 font-weight:bold;
+}
+
+a:link {color: black;}
+a:visited {color: lime;}
+a:hover {color: red;}
+a:active {color: #0000FF;}
