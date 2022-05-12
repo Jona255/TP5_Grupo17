@@ -5,13 +5,13 @@ public class Alumno {
 	private String nombres;
 	private String apellido;
 	private String eMail;
-	private int telefono;
+	private String telefono;
 	
 	public Alumno() {
 		// TODO Auto-generated constructor stub
 	}
-	
-	public Alumno(int dni, String nombres, String apellido, String eMail, int telefono) {
+
+	public Alumno(int dni, String nombres, String apellido, String eMail, String telefono) {
 		super();
 		this.dni = dni;
 		this.nombres = nombres;
@@ -26,14 +26,6 @@ public class Alumno {
 
 	public void setDni(int dni) {
 		this.dni = dni;
-	}
-
-	public int getTelefono() {
-		return telefono;
-	}
-
-	public void setTelefono(int telefono) {
-		this.telefono = telefono;
 	}
 
 	public String getNombres() {
@@ -59,7 +51,14 @@ public class Alumno {
 	public void seteMail(String eMail) {
 		this.eMail = eMail;
 	}
-	
-	
 
+	public String getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		this.telefono = telefono;
+	}
+	
+	
 }
