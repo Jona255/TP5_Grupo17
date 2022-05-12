@@ -1,86 +1,80 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta "utf-8">
-	<title>Contacto</title>
-</head>
-
-<body>
-	<header>
-		<h1 aling="center">Contactos</h1>
-		<img title="Contacto" alt="esta es la imagen" width="500" height="200"
-		src="../static/images/contacto.png">
-
-	</header>
-	<nav>
-		<ul>
-			<li> <a href="index.html">Inicio</a></li>
-			<li> <a href="agenda.html">Agenda</a></li>
-			<li> <a href="beneficios">Beneficios y Becas</a></li>
-			<li> <a href="contacto.html">Cont�ctanos</a></li>
-		</ul>
-	</nav>
-	<form action="#" method="post">
-		<p>
-		<label for="nombre">Nombre y Apellido </label>
-			<input type="text" id="nombre"><BR>
-		</p>			
-		<p>
-			<label for="provincia">Provincia</label>
-			<select name="provincia" id="prov">
-  				<option value="Capital Federal">Capital Federal</option>
-  				<option value="Buenos Aires">Buenos Aires</option>
-  				<option value="Catamarca">Catamarca</option>
-  				<option value="Chaco">Chaco</option>
-  				<option value="Chubut">Chubut</option>
-  				<option value="Córdoba">Cordoba</option>
-  				<option value="Corrientes">Corrientes</option>
-  				<option value="Entre Ríos">Entre Rios</option>
-  				<option value="Formosa">Formosa</option>
-  				<option value="Jujuy">Jujuy</option>
-  				<option value="La Pampa">La Pampa</option>
-  				<option value="La Rioja">La Rioja</option>
-  				<option value="Mendoza">Mendoza</option>
-  				<option value="Misiones">Misiones</option>
-  				<option value="Neuquén">Neuqu�nn</option>
-  				<option value="Río Negro">R�o negro</option>
-  				<option value="Salta">Salta</option>
-  				<option value="San Juan">San Juan</option>
-  				<option value="San Luis">San Luis</option>
-  				<option value="Santa Cruz">Santa Cruz</option>
-  				<option value="Santa Fe">Santa Fe</option>
-  				<option value="Santiago del Estero">Santiago del Estero</option>
-  				<option value="Tierra del Fuego">Tierra del Fuego</option>
-  				<option value="Tucumán">Tucum�n</option>
-			</select>
-		</p>
-		<p>
-			<label for="telefono">Tel�fono </label>
-			<input type="number" id="telefono"><BR>
-		</p>
-		<p>
-			<label for="email">Correo electr�nico</label>
-			<input type="text" id="email"><BR>
-		</p>
-		<p>
-			<label for="estado">Estado Civil </label>
-			<li><input type="radio" name="estado" value="casado"> Casado</li>
-			<li><input type="radio" name="estado" value="soltero"> Soltero</li>
-			<li><input type="radio" name="estado" value="otro"> Otro</li>	
-		</p>
-		<p>
-			<label for="mensaje">Mensaje </label>
-			<textarea id="mensaje" name="mensage"></textarea><BR>
-		</p>
-		<p>
-			<button type="submit">Enviar datos</button>
-		</p>
-	</form>
-	<footer>
-		<p>2022. Portal de Capacitaci�n-Av. Gral. Manuel Belgrano 789-Teleefono(388)9999999 S.S. de Jujuy Republica
-			Argentina</p>
-	</footer>
-</body>
+<html xmlns:th="http://thymeleaf.org">
+	<head>
+		<link rel="stylesheet" type="text/css"
+		th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+			
+		<meta "utf-8">
+		<title>Contacto</title>
+	</head>
+	
+	<body>
+		<header>
+			<div th:insert="layouts/header::header"></div>
+			<img title="Contacto" alt="esta es la imagen" width="300" height="200"
+				src="images/contacto.png">
+			<h1 align="left">Contactos</h1>
+	
+		</header>
+		
+		<form action="#" method="post">
+			<p>
+			<label for="nombre">Nombre y Apellido </label>
+				<input type="text" id="nombre"><BR>
+			</p>			
+			<p>
+				<label for="provincia">Provincia</label>
+				<select name="provincia" id="prov">
+	  				<option value="Capital Federal">Capital Federal</option>
+	  				<option value="Buenos Aires">Buenos Aires</option>
+	  				<option value="Catamarca">Catamarca</option>
+	  				<option value="Chaco">Chaco</option>
+	  				<option value="Chubut">Chubut</option>
+	  				<option value="Córdoba">Cordoba</option>
+	  				<option value="Corrientes">Corrientes</option>
+	  				<option value="Entre Ríos">Entre Rios</option>
+	  				<option value="Formosa">Formosa</option>
+	  				<option value="Jujuy">Jujuy</option>
+	  				<option value="La Pampa">La Pampa</option>
+	  				<option value="La Rioja">La Rioja</option>
+	  				<option value="Mendoza">Mendoza</option>
+	  				<option value="Misiones">Misiones</option>
+	  				<option value="Neuquén">Neuqu�nn</option>
+	  				<option value="Río Negro">R�o negro</option>
+	  				<option value="Salta">Salta</option>
+	  				<option value="San Juan">San Juan</option>
+	  				<option value="San Luis">San Luis</option>
+	  				<option value="Santa Cruz">Santa Cruz</option>
+	  				<option value="Santa Fe">Santa Fe</option>
+	  				<option value="Santiago del Estero">Santiago del Estero</option>
+	  				<option value="Tierra del Fuego">Tierra del Fuego</option>
+	  				<option value="Tucumán">Tucum�n</option>
+				</select>
+			</p>
+			<p>
+				<label for="telefono">Tel�fono </label>
+				<input type="number" id="telefono"><BR>
+			</p>
+			<p>
+				<label for="email">Correo electr�nico</label>
+				<input type="text" id="email"><BR>
+			</p>
+			<p>
+				<label for="estado">Estado Civil </label>
+				<li><input type="radio" name="estado" value="casado"> Casado</li>
+				<li><input type="radio" name="estado" value="soltero"> Soltero</li>
+				<li><input type="radio" name="estado" value="otro"> Otro</li>	
+			</p>
+			<p>
+				<label for="mensaje">Mensaje </label>
+				<textarea id="mensaje" name="mensage"></textarea><BR>
+			</p>
+			<p>
+				<button type="submit">Enviar datos</button>
+			</p>
+		</form>
+		<footer th:replace="/layouts/footer::footer"></footer>
+	</body>
 
 </html>
