@@ -18,62 +18,76 @@
 	
 		</header>
 		
-		<form action="#" method="post">
-			<p>
-			<label for="nombre">Nombre y Apellido </label>
-				<input type="text" id="nombre"><BR>
-			</p>			
-			<p>
-				<label for="provincia">Provincia</label>
-				<select name="provincia" id="prov">
-	  				<option value="Capital Federal">Capital Federal</option>
-	  				<option value="Buenos Aires">Buenos Aires</option>
-	  				<option value="Catamarca">Catamarca</option>
-	  				<option value="Chaco">Chaco</option>
-	  				<option value="Chubut">Chubut</option>
-	  				<option value="Córdoba">Cordoba</option>
-	  				<option value="Corrientes">Corrientes</option>
-	  				<option value="Entre Ríos">Entre Rios</option>
-	  				<option value="Formosa">Formosa</option>
-	  				<option value="Jujuy">Jujuy</option>
-	  				<option value="La Pampa">La Pampa</option>
-	  				<option value="La Rioja">La Rioja</option>
-	  				<option value="Mendoza">Mendoza</option>
-	  				<option value="Misiones">Misiones</option>
-	  				<option value="Neuquén">Neuqu�nn</option>
-	  				<option value="Río Negro">R�o negro</option>
-	  				<option value="Salta">Salta</option>
-	  				<option value="San Juan">San Juan</option>
-	  				<option value="San Luis">San Luis</option>
-	  				<option value="Santa Cruz">Santa Cruz</option>
-	  				<option value="Santa Fe">Santa Fe</option>
-	  				<option value="Santiago del Estero">Santiago del Estero</option>
-	  				<option value="Tierra del Fuego">Tierra del Fuego</option>
-	  				<option value="Tucumán">Tucum�n</option>
-				</select>
-			</p>
-			<p>
-				<label for="telefono">Tel�fono </label>
-				<input type="number" id="telefono"><BR>
-			</p>
-			<p>
-				<label for="email">Correo electr�nico</label>
-				<input type="text" id="email"><BR>
-			</p>
-			<p>
-				<label for="estado">Estado Civil </label>
-				<li><input type="radio" name="estado" value="casado"> Casado</li>
-				<li><input type="radio" name="estado" value="soltero"> Soltero</li>
-				<li><input type="radio" name="estado" value="otro"> Otro</li>	
-			</p>
-			<p>
-				<label for="mensaje">Mensaje </label>
-				<textarea id="mensaje" name="mensage"></textarea><BR>
-			</p>
-			<p>
-				<button type="submit">Enviar datos</button>
-			</p>
-		</form>
+		<form action="#" class="border p-3 form" method="post">
+				<div class="mb-3">
+		  			<label for="nombre" class="form-label">Nombre y Apellido</label>
+		  			<input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+				</div>		
+				<div>
+					<label for="provincia">Provincia</label>
+					<select class="form-select" aria-label="Default select example">		
+						<option selected>Provincia</option>
+						<option value="Capital Federal">Capital Federal</option>
+		  				<option value="Buenos Aires">Buenos Aires</option>
+		  				<option value="Catamarca">Catamarca</option>
+		  				<option value="Chaco">Chaco</option>
+		  				<option value="Chubut">Chubut</option>
+		  				<option value="Cordoba">Cordoba</option>
+		  				<option value="Corrientes">Corrientes</option>
+		  				<option value="Entre Rios">Entre Rios</option>
+		  				<option value="Formosa">Formosa</option>
+		  				<option value="Jujuy">Jujuy</option>
+		  				<option value="La Pampa">La Pampa</option>
+		  				<option value="La Rioja">La Rioja</option>
+		  				<option value="Mendoza">Mendoza</option>
+		  				<option value="Misiones">Misiones</option>
+		  				<option value="Neuquen">Neuquen</option>
+		  				<option value="Rio Negro">Rio negro</option>
+		  				<option value="Salta">Salta</option>
+		  				<option value="San Juan">San Juan</option>
+		  				<option value="San Luis">San Luis</option>
+		  				<option value="Santa Cruz">Santa Cruz</option>
+		  				<option value="Santa Fe">Santa Fe</option>
+		  				<option value="Santiago del Estero">Santiago del Estero</option>
+		  				<option value="Tierra del Fuego">Tierra del Fuego</option>
+		  				<option value="Tucuman">Tucuman</option>
+					</select>
+				</div>
+				<div class="mb-3">
+		  			<label for="telefono" class="form-label">Telefono</label>
+		  			<input type="text" class="form-control" id="telefono" placeholder="Telefono">
+				</div>
+				<div class="mb-3">
+		  			<label for="email" class="form-label">Correo electronico</label>
+		  			<input type="email" class="form-control" id="email" placeholder="name@example.com">
+				</div>
+				<div>
+					<label for="estado">Estado Civil </label>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="estado"
+							id="estado1"> <label class="form-check-label" for="estado1">
+							casado </label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="estado"
+							id="estado2" checked> <label class="form-check-label"
+							for="estado2">soltero</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="estado"
+							id="estado3" checked> <label class="form-check-label"
+							for="estado3">otro</label>
+					</div>
+					<div class="mb-3">
+						<label for="mensaje" class="form-label">Mensaje</label>
+						<textarea class="form-control" id="mensaje" rows="3"></textarea>
+					</div>
+				</div>
+				
+				 <button type="submit" class="btn btn-primary">Enviar datos</button>
+				
+			</form>
+		
 		<footer th:replace="/layouts/footer::footer"></footer>
 	</body>
 
