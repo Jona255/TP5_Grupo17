@@ -31,6 +31,28 @@ h2 {
 	
 }
 
+h3 {
+	color:fuchsia;
+	font-size: 36px;
+	font-family: fantasy;
+	font-style:oblique;
+	font-size:25px;
+}
+
+.principal{
+	color:#0000ff;
+}
+
+body{
+	background-color:#d9d9ff;
+	}
+form {
+  position : relative;
+  width  : 450px;
+  box-sizing: border-box;
+  background :silver; 
+}
+
 a {
 	text-decoration: underline;
 	 font-family:verdana;
