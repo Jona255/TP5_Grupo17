@@ -1,6 +1,6 @@
 @charset "ISO-8859-1";
 
-P {color:black; 
+p {color:black; 
 	font-size:15px;
    font-family:Courier;
    font-weight:bold;
@@ -46,11 +46,16 @@ h3 {
 body{
 	background-color:#d9d9ff;
 	}
+	
 form {
   position : relative;
   width  : 450px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   background :silver; 
+}
+
+table {
+  border: red 5px solid;
 }
 
 a {

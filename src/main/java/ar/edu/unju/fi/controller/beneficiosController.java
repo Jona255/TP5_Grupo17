@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import ar.edu.unju.fi.model.Docente;
 import ar.edu.unju.fi.util.ListaAlumno;
 import ar.edu.unju.fi.util.ListaBeca;
 

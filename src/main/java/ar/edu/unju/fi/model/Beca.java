@@ -3,7 +3,7 @@ package ar.edu.unju.fi.model;
 import java.time.LocalDate;
 
 public class Beca {
-	private int código;
+	private int codigo;
 	private Curso curso; 
 	private LocalDate fechaInicio;
 	private LocalDate fechaCierre;
@@ -14,21 +14,21 @@ public class Beca {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Beca(int código, Curso curso, LocalDate fechaInicio, LocalDate fechaCierre, String estado) {
+	public Beca(int codigo, Curso curso, LocalDate fechaInicio, LocalDate fechaCierre, String estado) {
 		super();
-		this.código = código;
+		this.codigo = codigo;
 		this.curso = curso;
 		this.fechaInicio = fechaInicio;
 		this.fechaCierre = fechaCierre;
 		this.estado = estado;
 	}
 
-	public int getCódigo() {
-		return código;
+	public int getCodigo() {
+		return codigo;
 	}
 
-	public void setCódigo(int código) {
-		this.código = código;
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
 	}
 
 	public Curso getCurso() {
@@ -62,7 +62,6 @@ public class Beca {
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
-	
 
+	
 }
