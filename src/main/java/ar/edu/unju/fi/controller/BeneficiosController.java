@@ -9,7 +9,7 @@ import ar.edu.unju.fi.util.ListaAlumno;
 import ar.edu.unju.fi.util.ListaBeca;
 
 @Controller
-public class beneficiosController {
+public class BeneficiosController {
 
 	@GetMapping("/beneficio")
 	public String getBeneficiosPage(Model model) {//
