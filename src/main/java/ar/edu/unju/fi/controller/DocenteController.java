@@ -15,7 +15,7 @@ import ar.edu.unju.fi.util.ListaDocente;
 @RequestMapping("/docente")
 public class DocenteController {
 	
-	@GetMapping("/alta")
+	@GetMapping("/nuevo")
 	public String getAltaDocentePage(Model model) {
 		
 		Docente nuevoDocente=new Docente();
