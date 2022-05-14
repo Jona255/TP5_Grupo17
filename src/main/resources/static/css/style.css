@@ -5,9 +5,7 @@ p {color:black;
    font-family:Courier;
    font-weight:bold;
    font-style:italic;
-   line-height:30px;
-   
-   
+   line-height:30px;  
    text-transform:capitalize;
    text-align:left;
    text-indent:30px;
@@ -55,6 +53,7 @@ form {
 }
 
 table {
+	position : relative;
   border: red 5px solid;
 }
 
@@ -64,7 +63,5 @@ a {
 	 font-weight:bold;
 }
 
-a:link {color: black;}
-a:visited {color: lime;}
 a:hover {color: red;}
 a:active {color: #0000FF;}
