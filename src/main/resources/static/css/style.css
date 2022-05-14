@@ -63,5 +63,9 @@ a {
 	 font-weight:bold;
 }
 
-a:hover {color: red;}
-a:active {color: #0000FF;}
+a:link, a:visited, a:focus {
+  color: black;
+}
+a:hover {
+  background: yellow;
+}
