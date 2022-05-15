@@ -59,6 +59,13 @@ public class Alumno {
 	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
+
+	@Override
+	public String toString() {
+		return "Alumno [dni=" + dni + ", nombres=" + nombres + ", apellido=" + apellido + ", eMail=" + eMail
+				+ ", telefono=" + telefono + "]";
+	}
+	
 	
 	
 }
