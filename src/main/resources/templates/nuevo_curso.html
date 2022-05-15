@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Registro de Curso</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css}">
+		<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+	</head>
+	<body>
+		<header>
+			<div th:replace="/layouts/header::header"></div>			
+			<h1 align="center">Alta de Curso</h1>		
+		</header>
+		<div class="container col-4">
+			<form th:action="@{/curso/guardar}" method="POST" th:object="${curso}">
+				<div class="mb-3">
+					<label  class="form-label">Código</label> 
+					<input  th:field="*{codigo}" type="number" class="form-control" >
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Título</label> 
+					<input  th:field="*{titulo}" type="text" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label  class="form-label">Categoría</label> 
+					<input  th:field="*{categoria}" type="text" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Fecha de Inicio</label> 
+					<input th:field="*{fechaInicio}" type="email" class="form-control" >
+				</div>
+				<div class="mb-3">
+					<label class="form-label">Fecha de Fin</label> 
+					<input th:field="*{fechaFin}" type="text" class="form-control" >
+				</div>
+				<div class="mb-3">
+					<label  class="form-label">Cantidad de Horas</label> 
+					<input  th:field="*{cantidadDeHoras}" type="text" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label  class="form-label">Modalidad</label> 
+					<input  th:field="*{modalidad}" type="text" class="form-control">
+				</div>
+				<div class="mb-3">
+					<label  class="form-label">Docente</label> 
+					<input  th:field="*{docente}" type="text" class="form-control">
+				</div>
+				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+					<button class="btn btn-primary me-md-2" type="submit">Guardar</button>
+					 <a th:href="@{/home}" class="btn btn-secondary">Cancelar</a>	  				
+				</div>
+			</form><br><br>
+		</div>
+		<br><br>
+		<footer th:replace="/layouts/footer :: footer"></footer>
+		<script type="text/javascript" th:src="@{/webjars/jquery/3.6.0/jquery.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/popper.js/2.9.3/umd/popper.min.js}"></script>
+		<script type="text/javascript" th:src="@{/webjars/bootstrap/5.1.3/js/bootstrap.min.js}"></script>
+	</body>
+</html>>
