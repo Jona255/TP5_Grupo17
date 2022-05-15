@@ -20,7 +20,7 @@ public class AlumnoController {
 	private static final Log LOGGER = LogFactory.getLog(AlumnoController.class);
 	
 	@GetMapping("/nuevo")
-	public String getFormNuevoAlumnnoPage(Model model) {
+	public String getFormNuevoAlumnoPage(Model model) {
 		model.addAttribute("alumno", new Alumno());
 		return "nuevo_alumno";
 	}
