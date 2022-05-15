@@ -3,6 +3,7 @@ package ar.edu.unju.fi.model;
 import java.time.LocalDate;
 
 public class Beca {
+
 	private int codigo;
 	private Curso curso; 
 	private LocalDate fechaInicio;
@@ -61,6 +62,12 @@ public class Beca {
 
 	public void setEstado(String estado) {
 		this.estado = estado;
+	}
+	
+	@Override
+	public String toString() {
+		return "Beca [codigo=" + codigo + ", curso=" + curso + ", fechaInicio=" + fechaInicio + ", fechaCierre="
+				+ fechaCierre + ", estado=" + estado + "]";
 	}
 
 	
