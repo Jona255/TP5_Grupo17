@@ -30,7 +30,7 @@
 						</tr>	
 						<tr th:each="d: ${becas}">
 							<td th:text="${d.codigo}"></td>
-							<td th:text="${d.curso}"></td>
+							<td th:text="${d.curso.titulo}"></td>
 							<td th:text="${#temporals.format(d.fechaInicio,'dd/MMM/yyyy')}"></td>
 							<td th:text="${#temporals.format(d.fechaCierre,'dd/MMM/yyyy')}"></td>
 							<td th:text="${d.estado}"></td>
