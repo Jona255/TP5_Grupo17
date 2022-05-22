@@ -2,14 +2,31 @@ package ar.edu.unju.fi.model;
 
 import java.time.LocalDate;
 
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 public class Curso {
+	@Min (value=1,message="el codigo debe ser mayor e iguala 1")
+	@Size (min=3, max=100,message="el titulo debe tener entre 3 y 100 caracteres") 
 	private int codigo;
+	@NotEmpty (message="El titulo no puede estar vacio")
 	private String titulo;
+	@NotBlank (message="la categoria no puede estar vacio")
 	private String categoria;
+	@PastOrPresent
 	private LocalDate fechaInicio;
+	@FutureOrPresent
 	private LocalDate fechaFin;
+	@NotEmpty @Positive (message="la cantidad de horas no puede ser vacio")
 	private int cantidadDeHoras;
+	@NotEmpty (message="la modalidad no puede ser vacio")
 	private String modalidad;
+	@NotEmpty (message="el docente no puede ser vacio")
 	private Docente docente;
 	
 	public Curso() {

@@ -1,10 +1,23 @@
 package ar.edu.unju.fi.model;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 public class Docente {
+	
+	@Min (value=1,message="el legajo debe ser mayor e iguala 1")
+	@Size (min=3, max=100,message="el nombre debe tener entre 3 y 100 caracteres") 
 	private int legajo;
+	@NotEmpty (message="Elnombre nopuede estar vacio")
 	private String nombres;
+	@NotBlank (message="el apellido no puede estar vacio")
 	private String apellido;
+	@NotEmpty @Email
 	private String eMail;
+	@NotEmpty (message="el telefono no puede ser vacio")
 	private String telefono;
 	
 	public Docente() {
