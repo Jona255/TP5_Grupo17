@@ -4,13 +4,14 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import ar.edu.unju.fi.model.Alumno;
+
 import ar.edu.unju.fi.model.Docente;
 import ar.edu.unju.fi.util.ListaDocente;
 
@@ -30,8 +31,13 @@ public class DocenteController {
 	
 	
 	@PostMapping("/guardar")
-	public ModelAndView getGuardarDocentePage(@ModelAttribute("docente")Docente docente) {
+	public ModelAndView getGuardarDocentePage(@ModelAttribute("docente")Docente docente, BindingResult bindingResult) {
 		
+		if(bindingResult.hasErrors()) {
+			ModelAndView mav= new ModelAndView ("nuevo_docente");
+			mav.addObject("docente", docente);
+			return mav;
+		}
 		ModelAndView mav = new ModelAndView("lista_docentes");		
 		ListaDocente listaDocentes = new ListaDocente();
 		if(listaDocentes.getListDocente().add(docente)) {

@@ -4,6 +4,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,7 +27,13 @@ public class CursoController {
 	}
 	
 	@PostMapping("/guardar")
-	public ModelAndView getListaCursosPage(@ModelAttribute("curso")Curso curso) {
+	public ModelAndView getListaCursosPage(@ModelAttribute("curso")Curso curso, BindingResult bindingResult) {
+		
+		if(bindingResult.hasErrors()) {
+			ModelAndView mav= new ModelAndView ("nuevo_curso");
+			mav.addObject("curso", curso);
+			return mav;
+		}
 		ModelAndView mav = new ModelAndView("lista_cursos");
 		ListaCurso listaCursos = new ListaCurso();
 		if(listaCursos.getListCurso().add(curso)) {
