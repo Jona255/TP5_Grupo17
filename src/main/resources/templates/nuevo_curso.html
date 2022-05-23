@@ -54,11 +54,13 @@
 					<div class="text-danger"th:if="${#fields.hasErrors('modalidad')}"th:errors="*{modalidad}"></div>
 				
 				</div>
-				<div class="mb-3">
+				<div>
 					<label  class="form-label">Docente</label> 
-					<input  th:field="*{docente}" type="text" class="form-control">
-					<div class="text-danger"th:if="${#fields.hasErrors('docente')}"th:errors="*{docente}"></div>
-				
+		  			<select class="form-control mb-3" th:field="*{docente.legajo}" >
+		  				<option value="0"></option>
+		  				<option th:each="d: ${unDocente}" th:value="${d.legajo}" th:text="${d.apellido}+', '+${d.nombres}"></option>
+		  			</select>
+		  			<div class="text-danger" th:if="${#fields.hasErrors('docente')}" th:errors="*{docente}"></div>
 				</div>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 					<button class="btn btn-primary me-md-2" type="submit">Guardar</button>

@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unju.fi.model.Curso;
 import ar.edu.unju.fi.util.ListaCurso;
+import ar.edu.unju.fi.util.ListaDocente;
 
 @Controller
 @RequestMapping("/curso")
@@ -23,6 +24,7 @@ public class CursoController {
 	@GetMapping("/nuevo")
 	public String getFormNuevoCursoPage(Model model) {
 		model.addAttribute("curso", new Curso());
+		model.addAttribute("unDocente", new ListaDocente().getListDocente()); 
 		return "nuevo_curso";
 	}
 	

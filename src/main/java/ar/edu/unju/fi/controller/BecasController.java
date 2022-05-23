@@ -14,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import ar.edu.unju.fi.model.Beca;
 import ar.edu.unju.fi.util.ListaBeca;
+import ar.edu.unju.fi.util.ListaCurso;
 
 @Controller
 @RequestMapping("/beca")
@@ -23,6 +24,7 @@ public class BecasController {
 	@GetMapping("/nuevo")
 	public String getFormNuevoBecaPage(Model model) {
 		model.addAttribute("beca", new Beca());
+		model.addAttribute("unCurso", new ListaCurso().getListCurso()); 		
 		return "nueva_beca";
 	}
 	

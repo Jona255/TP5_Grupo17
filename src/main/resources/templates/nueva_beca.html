@@ -18,12 +18,14 @@
 					<input  th:field="*{codigo}" type="number" class="form-control" >
 					<div class="text-danger"th:if="${#fields.hasErrors('codigo')}"th:errors="*{codigo}"></div>				
 				</div>
-				<div class="mb-3">
-					<label class="form-label">Curso</label> 
-					<input  th:field="*{curso}" type="text" class="form-control">
-					<div class="text-danger"th:if="${#fields.hasErrors('curso')}"th:errors="*{curso}"></div>
-				
-				</div>
+				<div>
+					<label  class="form-label">Curso</label> 
+		  			<select class="form-control mb-3" th:field="*{curso.codigo}" >
+		  				<option value="0"></option>
+		  				<option th:each="c: ${unCurso}" th:value="${c.codigo}" th:text="${c.titulo}"></option>
+		  			</select>
+		  			<div class="text-danger" th:if="${#fields.hasErrors('curso')}" th:errors="*{curso}"></div>
+				</div>	
 				<div class="mb-3">
 					<label  class="form-label">Fecha de Inicio</label> 
 					<input  th:field="*{fechaInicio}" type="text" class="form-control">
