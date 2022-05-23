@@ -16,34 +16,49 @@
 				<div class="mb-3">
 					<label  class="form-label">Código</label> 
 					<input  th:field="*{codigo}" type="number" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('codigo')}"th:errors="*{codigo}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Título</label> 
 					<input  th:field="*{titulo}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('titulo')}"th:errors="*{titulo}"></div>
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Categoría</label> 
 					<input  th:field="*{categoria}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('categoria')}"th:errors="*{categoria}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Fecha de Inicio</label> 
 					<input th:field="*{fechaInicio}" type="email" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('fechaInicio')}"th:errors="*{fechaInicio}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Fecha de Fin</label> 
 					<input th:field="*{fechaFin}" type="text" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('fechaFin')}"th:errors="*{fechaFin}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Cantidad de Horas</label> 
 					<input  th:field="*{cantidadDeHoras}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('cantidadDeHoras')}"th:errors="*{cantidadDeHoras}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Modalidad</label> 
 					<input  th:field="*{modalidad}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('modalidad')}"th:errors="*{modalidad}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Docente</label> 
 					<input  th:field="*{docente}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('docente')}"th:errors="*{docente}"></div>
+				
 				</div>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 					<button class="btn btn-primary me-md-2" type="submit">Guardar</button>

@@ -16,22 +16,31 @@
 				<div class="mb-3">
 					<label  class="form-label">Código</label> 
 					<input  th:field="*{codigo}" type="number" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('codigo')}"th:errors="*{codigo}"></div>				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Curso</label> 
 					<input  th:field="*{curso}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('curso')}"th:errors="*{curso}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Fecha de Inicio</label> 
 					<input  th:field="*{fechaInicio}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('fechaInicio')}"th:errors="*{fechaInicio}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Fecha de Cierre</label> 
 					<input th:field="*{fechaCierre}" type="email" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('fechaCierre')}"th:errors="*{fechaCierre}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Estado</label> 
 					<input th:field="*{estado}" type="text" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('estado')}"th:errors="*{estado}"></div>
+				
 				</div>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 					<button class="btn btn-primary me-md-2" type="submit">Guardar</button>

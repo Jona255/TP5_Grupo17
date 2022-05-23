@@ -16,22 +16,32 @@
 				<div class="mb-3">
 					<label  class="form-label">Legajo</label> 
 					<input  th:field="*{legajo}" type="number" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('legajo')}"th:errors="*{legajo}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Nombres</label> 
 					<input  th:field="*{nombres}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('nombres')}"th:errors="*{nombres}"></div>				
+				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Apellidos</label> 
 					<input  th:field="*{apellido}" type="text" class="form-control">
+					<div class="text-danger"th:if="${#fields.hasErrors('apellido')}"th:errors="*{apellido}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">E-mail</label> 
 					<input th:field="*{eMail}" type="email" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('eMail')}"th:errors="*{eMail}"></div>
+				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Teléfono</label> 
 					<input th:field="*{telefono}" type="text" class="form-control" >
+					<div class="text-danger"th:if="${#fields.hasErrors('telefono')}"th:errors="*{telefono}"></div>
+				
 				</div>
 				<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 					<button class="btn btn-primary me-md-2" type="submit">Guardar</button>
