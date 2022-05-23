@@ -4,11 +4,12 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 public class Alumno {
 	
-	@Min (value=1000000,message="el dni debe ser mayor e iguala 1000000")	
+	@Positive @Min (value=1000000,message="el dni debe ser mayor e igual a 1000000")	
 	private int dni;
 	@Size (min=3, max=100,message="el nombre debe tener entre 3 y 100 caracteres") 
 	@NotEmpty (message="Elnombre nopuede estar vacio")

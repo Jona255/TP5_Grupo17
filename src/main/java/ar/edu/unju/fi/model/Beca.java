@@ -7,17 +7,22 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 public class Beca {
 	
-	@Min (value=1,message="el codigo debe ser mayor e igual a 1")	
+	@Positive @Min (value=1,message="el codigo debe ser mayor e igual a 1")	
 	private int codigo;
 	@NotEmpty (message="El curso no puede estar vacio")
 	private Curso curso;
 	@PastOrPresent
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
 	@FutureOrPresent
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaCierre;
 	@Size (min=3, max=100,message="el estado debe tener entre 3 y 100 caracteres") 
 	@NotBlank (message="el estado no puede estar vacio")

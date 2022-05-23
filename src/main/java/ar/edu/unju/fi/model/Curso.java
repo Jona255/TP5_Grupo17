@@ -10,8 +10,10 @@ import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Curso {
-	@Min (value=1,message="el codigo debe ser mayor e iguala 1")
+	@Positive @Min (value=1,message="el codigo debe ser mayor e iguala 1")
 	@Size (min=3, max=100,message="el titulo debe tener entre 3 y 100 caracteres") 
 	private int codigo;
 	@NotEmpty (message="El titulo no puede estar vacio")
@@ -19,8 +21,10 @@ public class Curso {
 	@NotBlank (message="la categoria no puede estar vacio")
 	private String categoria;
 	@PastOrPresent
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
 	@FutureOrPresent
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaFin;
 	@NotEmpty @Positive (message="la cantidad de horas no puede ser vacio")
 	private int cantidadDeHoras;

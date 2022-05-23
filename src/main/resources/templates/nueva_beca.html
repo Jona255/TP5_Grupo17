@@ -27,16 +27,14 @@
 		  			<div class="text-danger" th:if="${#fields.hasErrors('curso')}" th:errors="*{curso}"></div>
 				</div>	
 				<div class="mb-3">
-					<label  class="form-label">Fecha de Inicio</label> 
-					<input  th:field="*{fechaInicio}" type="text" class="form-control">
+					<label for="fechaInicio" class="form-label">Fecha Inicio</label> 
+					<input  th:field="*{fechaInicio}" type="date"  >
 					<div class="text-danger"th:if="${#fields.hasErrors('fechaInicio')}"th:errors="*{fechaInicio}"></div>
-				
 				</div>
 				<div class="mb-3">
-					<label class="form-label">Fecha de Cierre</label> 
-					<input th:field="*{fechaCierre}" type="email" class="form-control" >
+					<label for="fechaCierre" class="form-label">Fecha Cierre</label> 
+					<input th:field="*{fechaCierre}" type="date" >
 					<div class="text-danger"th:if="${#fields.hasErrors('fechaCierre')}"th:errors="*{fechaCierre}"></div>
-				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Estado</label> 

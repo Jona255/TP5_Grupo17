@@ -16,8 +16,7 @@
 				<div class="mb-3">
 					<label  class="form-label">Código</label> 
 					<input  th:field="*{codigo}" type="number" class="form-control" >
-					<div class="text-danger"th:if="${#fields.hasErrors('codigo')}"th:errors="*{codigo}"></div>
-				
+					<div class="text-danger"th:if="${#fields.hasErrors('codigo')}"th:errors="*{codigo}"></div>				
 				</div>
 				<div class="mb-3">
 					<label class="form-label">Título</label> 
@@ -27,20 +26,17 @@
 				<div class="mb-3">
 					<label  class="form-label">Categoría</label> 
 					<input  th:field="*{categoria}" type="text" class="form-control">
-					<div class="text-danger"th:if="${#fields.hasErrors('categoria')}"th:errors="*{categoria}"></div>
-				
+					<div class="text-danger"th:if="${#fields.hasErrors('categoria')}"th:errors="*{categoria}"></div>				
 				</div>
 				<div class="mb-3">
-					<label class="form-label">Fecha de Inicio</label> 
-					<input th:field="*{fechaInicio}" type="email" class="form-control" >
+					<label for="fechaInicio" class="form-label">Fecha Inicio</label> 
+					<input  th:field="*{fechaInicio}" type="date"  >
 					<div class="text-danger"th:if="${#fields.hasErrors('fechaInicio')}"th:errors="*{fechaInicio}"></div>
-				
 				</div>
 				<div class="mb-3">
-					<label class="form-label">Fecha de Fin</label> 
-					<input th:field="*{fechaFin}" type="text" class="form-control" >
+					<label for="fechaFin" class="form-label">Fecha Fin</label> 
+					<input th:field="*{fechaFin}" type="date" >
 					<div class="text-danger"th:if="${#fields.hasErrors('fechaFin')}"th:errors="*{fechaFin}"></div>
-				
 				</div>
 				<div class="mb-3">
 					<label  class="form-label">Cantidad de Horas</label> 
