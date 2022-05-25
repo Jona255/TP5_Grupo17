@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
@@ -16,12 +16,12 @@ public class Beca {
 	
 	@Positive @Min (value=1,message="el codigo debe ser mayor e igual a 1")	
 	private int codigo;
-	@NotEmpty (message="El curso no puede estar vacio")
+	@NotNull (message="El curso no puede estar vacio")
 	private Curso curso;
-	@PastOrPresent
+	@NotNull @PastOrPresent
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
-	@FutureOrPresent
+	@NotNull @FutureOrPresent
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaCierre;
 	@Size (min=3, max=100,message="el estado debe tener entre 3 y 100 caracteres") 

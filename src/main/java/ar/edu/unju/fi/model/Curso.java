@@ -6,31 +6,31 @@ import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
-import javax.validation.constraints.Positive;
 import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Curso {
-	@Positive @Min (value=1,message="el codigo debe ser mayor e iguala 1")
-	@Size (min=3, max=100,message="el titulo debe tener entre 3 y 100 caracteres") 
+	@Min (value=1,message="el codigo debe ser mayor e iguala 1")	
 	private int codigo;
+	@Size (min=3, max=100,message="el titulo debe tener entre 3 y 100 caracteres") 
 	@NotEmpty (message="El titulo no puede estar vacio")
 	private String titulo;
 	@NotBlank (message="la categoria no puede estar vacio")
 	private String categoria;
-	@PastOrPresent
+	@NotNull @PastOrPresent 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaInicio;
-	@FutureOrPresent
+	@NotNull @FutureOrPresent
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaFin;
-	@NotEmpty @Positive (message="la cantidad de horas no puede ser vacio")
+	@Min(value = 1, message = "la cantidad de horas debe ser mayor o igual a 1")
 	private int cantidadDeHoras;
 	@NotEmpty (message="la modalidad no puede ser vacio")
 	private String modalidad;
-	@NotEmpty (message="el docente no puede ser vacio")
+	@NotNull (message="el docente no puede ser vacio")
 	private Docente docente;
 	
 	public Curso() {

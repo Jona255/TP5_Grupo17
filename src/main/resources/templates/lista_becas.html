@@ -28,12 +28,12 @@
 							<th>Estado</th>
 							<th>Opciones</th>
 						</tr>	
-						<tr th:each="d: ${becas}">
-							<td th:text="${d.codigo}"></td>
-							<td th:text="${d.curso.titulo}"></td>
-							<td th:text="${#temporals.format(d.fechaInicio,'dd/MMM/yyyy')}"></td>
-							<td th:text="${#temporals.format(d.fechaCierre,'dd/MMM/yyyy')}"></td>
-							<td th:text="${d.estado}"></td>
+						<tr th:each="b: ${becas}">
+							<td th:text="${b.codigo}"></td>
+							<td th:text="${b.curso.titulo}"></td>
+							<td th:text="${b.fechaInicio}"></td>
+							<td th:text="${b.fechaCierre}"></td>
+							<td th:text="${b.estado}"></td>
 							<td>								
 							<a href="#" class="btn btn-warning">Editar</a>
 							<a href="#" class="btn btn-danger">Eliminar</a>
